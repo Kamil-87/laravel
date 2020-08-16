@@ -5,7 +5,7 @@
     <title>Главная</title>
 </head>
 <body>
-    <?php include "menu.php"?>
+    @include("menu")
     <h1>Добро пожаловать!</h1>
 </body>
 </html>
