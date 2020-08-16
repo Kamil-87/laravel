@@ -6,6 +6,6 @@
 </head>
 <body>
     <?php include "menu.php"?>
-    <h1>Привет!</h1>
+    <h1>Добро пожаловать!</h1>
 </body>
 </html>
