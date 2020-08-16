@@ -9,5 +9,12 @@
 @endsection
 
 @section('content')
-    <h1>Добро пожаловать!</h1>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Добро пожаловать на новостной сайт</h3>
+                </div>
+        </div>
+    </div>
 @endsection

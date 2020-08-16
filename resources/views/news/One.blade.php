@@ -1,7 +1,7 @@
 @extends("layouts.main")
 
 @section('title')
-    @parentНовости
+    @parentНовость
 @endsection
 
 @section('menu')
@@ -9,10 +9,20 @@
 @endsection
 
 @section('content')
-    @if($news)
-        <h2>{{ $news['title'] }}</h2>
-        <p>{{ $news['text'] }}</p>
-    @else
-        <h3>Нет такой новости</h3>
-    @endif
+
+    <div class="container">
+        <div class="col-md-12">
+            <div class="card">
+                @if($news)
+                    <h3 class="card-header">{{ $news['title'] }}</h3>
+                    <div class="card-body">
+                        <p>{{ $news['text'] }}</p>
+                    </div>
+                @else
+                    <h3>Нет такой новости</h3>
+                @endif
+            </div>
+        </div>
+    </div>
+
 @endsection

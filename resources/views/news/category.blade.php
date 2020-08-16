@@ -1,7 +1,7 @@
 @extends("layouts.main")
 
 @section('title')
-    @parentНовости
+    @parentКатегория
 @endsection
 
 @section('menu')
@@ -9,12 +9,22 @@
 @endsection
 
 @section('content')
-    @forelse ($news as $item)
-        @if(!$item['isPrivate'])
-            <h3>{{ $item['title'] }}</h3>
-            <p>{{ $item['text'] }}</p>
-        @endif
-    @empty
-        <h3>Нет такой категории</h3>
-    @endforelse
+
+    <div class="container">
+        <div class="col-md-12">
+            <div class="card">
+                @forelse ($news as $item)
+                    @if(!$item['isPrivate'])
+                        <h3 class="card-header">{{ $item['title'] }}</h3>
+                        <p class="card-body">
+                            {{ $item['text'] }}
+                        </p>
+                    @endif
+                @empty
+                    <h3>Нет такой категории</h3>
+                @endforelse
+            </div>
+        </div>
+    </div>
+
 @endsection

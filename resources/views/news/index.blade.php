@@ -9,16 +9,24 @@
 @endsection
 
 @section('content')
-    <h1>Новости</h1>
 
-    @forelse ($news as $item)
-        <div>
-            <span>{{ $item['title'] }}</span>
-            @if(!$item['isPrivate'])
-                <a href="{{ route('news.show', $item['id']) }}">Подробнее...</a><br>
-            @endif
+    <div class="container">
+        <div class="col-md-12">
+            <div class="card">
+                <h3 class="card-header">Новости</h3>
+                <div class="card-body">
+                    @forelse ($news as $item)
+                        <div>
+                            <span>{{ $item['title'] }}</span>
+                            @if(!$item['isPrivate'])
+                                <a href="{{ route('news.show', $item['id']) }}">Подробнее...</a><br>
+                            @endif
+                        </div>
+                    @empty
+                        <h3>Нет новостей</h3>
+                    @endforelse
+                </div>
+            </div>
         </div>
-    @empty
-        <h3>Нет новостей</h3>
-    @endforelse
+    </div>
 @endsection

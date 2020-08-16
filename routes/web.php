@@ -21,6 +21,7 @@ Route::group([
     Route::get('/', 'IndexController@index')->name('index');
     Route::get('/test1', 'IndexController@test1')->name('test1');
     Route::get('/test2', 'IndexController@test2')->name('test2');
+    Route::match(['get', 'post'],'/create', 'IndexController@create')->name('create');
 });
 
 Route::group([
@@ -40,6 +41,6 @@ Route::group([
 
 Route::view('/vue', 'vue')->name('vue');
 
+Auth::routes();
 
-
-
+Route::get('/home', 'HomeController@index')->name('home');
