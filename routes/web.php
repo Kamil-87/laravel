@@ -38,6 +38,7 @@ Route::group([
     });
 });
 
+Route::view('/vue', 'vue')->name('vue');
 
 
 
